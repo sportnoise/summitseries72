@@ -1,0 +1,43 @@
+.block12 {
+    position: relative;
+    height: 760px;
+
+    &:after {
+        content: '';
+        height: 385px;
+        background: linear-gradient(180deg, $color-transparent 0%, $color-black 100%);
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &__bg {
+        background: url(../img/block12/bg.webp) no-repeat center / cover;
+        height: 100%;
+        mix-blend-mode: screen;
+    }
+
+    .not-use-webp &__bg {
+        background-image: url(../img/block12/bg.png);
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            height: 570px;
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        & {
+            height: 460px;
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            height: 360px;
+        }
+    }
+}

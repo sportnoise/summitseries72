@@ -1,0 +1,45 @@
+.btn {
+    height: 50px;
+    padding: 0 25px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    color: $color-white;
+    transition: .5s;
+
+    &-blue {
+        background-color: $color-blue;
+
+        &:hover {
+            background-color: $color-blue-hover;
+        }
+    }
+
+    &-red {
+        background-color: $color-red;
+
+        &:hover {
+            background-color: $color-red-hover;
+        }
+    }
+
+    &-white {
+        border: 1px solid $color-white;
+
+        &:hover {
+            background-color: $color-red;
+            border-color: $color-red;
+        }
+    }
+
+    &__icon {
+        margin: 0 10px 0 0;
+    }
+
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            padding: 0 20px;
+        }
+    }
+}

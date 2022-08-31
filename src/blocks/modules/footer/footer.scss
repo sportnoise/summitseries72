@@ -1,0 +1,137 @@
+.footer {
+
+    &__inner {
+        display: flex;
+        padding: 55px 0;
+    }
+    &__logos {
+        display: flex;
+        align-items: center;
+        margin: 22px 0 15px;
+    }
+    &__logo {
+        margin: 0 30px 0 0;
+    }
+    &__copy {
+        color: $color-footer;
+        letter-spacing: .01em;
+    }
+    &__right {
+        margin: 0 0 0 auto;
+    }
+    &__str {
+        width: 180px;
+        height: 180px;
+        position: relative;
+        border: 2px solid $color-footer;
+        display: block;
+        border-radius: 50%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 90px;
+            background-color: $color-footer;
+            top: 50%;
+            left: 50%;
+            transform: translate(0, -50%);
+            transition: .5s;
+        }
+        &:before {
+            border-top: 2px solid $color-footer;
+            border-left: 2px solid $color-footer;
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            transform: rotate(45deg);
+            left: 50%;
+            top: 50%;
+            margin: -31px 0 0 -34px;
+            transition: .5s;
+        }
+
+        &:hover,
+        &:hover:before {
+            border-color: $color-footer-hover;
+        }
+        &:hover:after {
+            background-color: $color-footer-hover;
+        }
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        &__inner {
+            padding: 67px 0;
+        }
+        &__logos {
+            margin: 23px 0 15px;
+        }
+        &__logo {
+            margin: 0 0 0 30px;
+            height: 120px;
+        }
+        &__right {
+            margin: 0 39px 0 auto;
+        }
+        &__str {
+            width: 167px;
+            height: 167px;
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        &__logos {
+            margin: 0 0 15px;
+        }
+        &__logo {
+            margin: 0 0 0 20px;
+            height: 80px;
+        }
+        &__str {
+            width: 98px;
+            height: 98px;
+
+            &:after {
+                height: 50px;
+            }
+            &:before {
+                width: 39px;
+                height: 39px;
+                margin: -18px 0 0 -19px;
+            }
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        &__inner {
+            padding: 48px 15px;
+            position: relative;
+        }
+        &__logos {
+            margin: 0 0 23px;
+        }
+        &__logo {
+            margin: 0 18px 0 0;
+            height: 80px;
+        }
+        &__str {
+            width: 98px;
+            height: 98px;
+            position: absolute;
+            right: 15px;
+            top: 40px;
+
+            &:after {
+                height: 50px;
+            }
+            &:before {
+                width: 39px;
+                height: 39px;
+                margin: -18px 0 0 -19px;
+            }
+        }
+    }
+}

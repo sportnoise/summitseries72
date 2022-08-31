@@ -1,0 +1,56 @@
+.block8 {
+    background: url(../img/block8/bg.webp) no-repeat center / cover;
+    height: 704px;
+    margin: 233px 0 0;
+    position: relative;
+
+    .not-use-webp & {
+        background-image: url(../img/block8/bg.png);
+    }
+
+    &__img {
+        position: absolute;
+        top: -103px;
+        left: 50%;
+        margin: 0 0 0 -530px;
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            height: 585px;
+            margin: 200px 0 0;
+
+            &__img {
+                top: -89px;
+                margin: 0 0 0 -408px;
+                width: 409px;
+            }
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        & {
+            height: 500px;
+
+            &__img {
+                top: -60px;
+                margin: 0 0 0 -150px;
+                width: 300px;
+            }
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            height: 358px;
+            margin: 0;
+
+            &__img {
+                top: -55px;
+                margin: 0 0 0 -100px;
+                height: 95px;
+            }
+        }
+    }
+}

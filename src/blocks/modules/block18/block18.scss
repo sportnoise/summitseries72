@@ -1,0 +1,139 @@
+.block18 {
+    margin: 0 0 50px;
+
+    &__inner {
+        margin: auto;
+        max-width: 868px;
+    }
+    &__title {
+        color: $color-yellow;
+        font-size: 33px;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0 0 23px;
+    }
+    &__bg {
+        background-color: $color-yellow;
+        color: $color-black;
+        padding: 50px 0 20px;
+        letter-spacing: .01em;
+    }
+    &__desc {
+        max-width: 730px;
+        margin: 0 0 40px;
+    }
+    &__items {
+        margin: 0 -150px 0 0;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid $color-black;
+        padding: 11px 0;
+        justify-content: space-between;
+    }
+    &__year {
+        font-size: 110px;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        height: 91px;
+        padding: 0 0 0 5px;
+    }
+    &__text {
+        width: calc(100% - 223px);
+    }
+    &__last {
+        padding: 45px 0 0;
+        letter-spacing: .01em;
+        max-width: 730px;
+        color: $color-yellow;
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            margin: 0 0 63px;
+
+            &__bg {
+                padding: 47px 0 16px;
+            }
+            &__inner {
+                max-width: 640px;
+            }
+            &__desc {
+                max-width: 1000px;
+                margin: 0 -85px 40px 0;
+            }
+            &__items {
+                margin: 0 -110px 0 0;
+            }
+            &__item {
+                padding: 25px 0;
+            }
+            &__last {
+                padding: 48px 0 0;
+                max-width: 620px;
+            }
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        &__items {
+            margin: 0;
+        }
+        &__item {
+            padding: 20px 0;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__year {
+            font-size: 70px;
+            height: auto;
+            padding: 0;
+        }
+        &__text {
+            width: 100%;
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            margin: 0 0 40px;
+
+            &__inner {
+                margin: 0 15px;
+            }
+            &__title {
+                font-size: 25px;
+                letter-spacing: .4em;
+                margin: 0 0 15px;
+            }
+            &__bg {
+                padding: 35px 0 20px;
+            }
+            &__desc {
+                margin: 0 0 30px;
+            }
+            &__items {
+                margin: 0;
+            }
+            &__item {
+                padding: 20px 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &__year {
+                font-size: 70px;
+                height: auto;
+                padding: 0;
+            }
+            &__text {
+                width: 100%;
+            }
+            &__last {
+                padding: 30px 0 0;
+            }
+        }
+    }
+}

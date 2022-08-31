@@ -1,0 +1,66 @@
+.block15 {
+    background: url(../img/block15/bg.webp) no-repeat center / cover;
+    position: relative;
+    height: 770px;
+
+    .not-use-webp & {
+        background-image: url(../img/block15/bg.png);
+    }
+
+    &:after {
+        content: '';
+        height: 385px;
+        background: linear-gradient(180deg, $color-transparent 0%, $color-black 100%);
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &__img {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        margin: 0 0 0 -673px;
+        bottom: -57px;
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            height: 570px;
+
+            &__img {
+                margin: 0 0 0 -495px;
+                bottom: -100px;
+                width: 315px;
+            }
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        & {
+            height: 450px;
+
+            &__img {
+                left: 50%;
+                margin: 0;
+                width: 200px;
+                bottom: -100px;
+            }
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            height: 375px;
+
+            &__img {
+                left: 50%;
+                margin: 0 0 0 -100px;
+                width: 200px;
+                bottom: -117px;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.block3 {
+    background-color: $color-yellow;
+
+    &__inner {
+        position: relative;
+    }
+    &__word {
+        font-weight: 400;
+        font-size: 33px;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+        color: $color-yellow;
+        position: absolute;
+        top: -70px;
+    }
+    &__year {
+        font-weight: 700;
+        font-size: 90px;
+        letter-spacing: -.03em;
+        color: $color-black;
+        position: absolute;
+        left: 0;
+        top: -16px;
+        line-height: 1;
+    }
+    &__text {
+        letter-spacing: .01em;
+        color: $color-black;
+        padding: 40px 140px 35px 300px;
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        &__text {
+            padding: 43px 45px 32px 256px;
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        &__text {
+            padding: 100px 0 50px;
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        &__inner {
+            margin: 0 15px;
+        }
+        &__word {
+            font-size: 25px;
+            top: -50px;
+        }
+        &__year {
+            font-size: 66px;
+            top: -13px;
+        }
+        &__text {
+            padding: 93px 0 40px;
+        }
+    }
+}
