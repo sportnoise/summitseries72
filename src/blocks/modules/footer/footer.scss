@@ -23,6 +23,9 @@
         &_num3 {
             margin: 0 auto;
         }
+        &_x {
+            display: none;
+        }
     }
     &__copy {
         color: $color-footer;
@@ -143,10 +146,17 @@
             width: auto;
         }
         &__logos {
-            margin: 0 0 30px;
+            margin: 30px 0 20px;
         }
         &__item {
             margin: 0 10px 0 0;
+
+            &_num2 {
+                display: none;
+            }
+            &_x {
+                display: block;
+            }
         }
         &__logo {
 
@@ -158,22 +168,51 @@
                 max-width: 85px;
             }
         }
+        &__x {
+            position: relative;
+            display: flex;
+            height: 21px;
+            width: 21px;
+            transform: rotate(45deg);
+    
+            &:before,
+            &:after {
+                content: "";
+                background-color: $color-footer;
+                position: absolute;
+            }
+            &:before {
+                height: 3px;
+                width: 100%;
+                top: 50%;
+                left: 0;
+                margin: -2px 0 0;
+            }
+            &:after {
+                height: 100%;
+                width: 3px;
+                top: 0;
+                left: 50%;
+                margin: 0 0 0 -2px;
+            }
+        }
         &__right {
             width: auto;
         }
         &__str {
-            width: 60px;
-            height: 60px;
+            width: 98px;
+            height: 98px;
             position: absolute;
             right: 15px;
+            top: 40px;
 
             &:after {
-                height: 30px;
+                height: 50px;
             }
             &:before {
-                width: 25px;
-                height: 25px;
-                margin: -13px 0 0 -12px;
+                width: 39px;
+                height: 39px;
+                margin: -18px 0 0 -19px;
             }
         }
     }
