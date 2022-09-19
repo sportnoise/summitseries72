@@ -12,6 +12,35 @@
     &__logo {
         margin: 0 30px 0 0;
     }
+    &__x {
+        position: relative;
+        display: flex;
+        height: 39px;
+        width: 39px;
+        margin: 0 30px 0 0;
+        transform: rotate(45deg);
+
+        &:before,
+        &:after {
+            content: "";
+            background-color: $color-footer;
+            position: absolute;
+        }
+        &:before {
+            height: 3px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            margin: -2px 0 0;
+        }
+        &:after {
+            height: 100%;
+            width: 3px;
+            top: 0;
+            left: 50%;
+            margin: 0 0 0 -2px;
+        }
+    }
     &__copy {
         color: $color-footer;
         letter-spacing: .01em;
@@ -70,8 +99,7 @@
             margin: 23px 0 15px;
         }
         &__logo {
-            margin: 0 0 0 30px;
-            height: 120px;
+            max-height: 120px;
         }
         &__right {
             margin: 0 39px 0 auto;
@@ -87,8 +115,13 @@
             margin: 0 0 15px;
         }
         &__logo {
-            margin: 0 0 0 20px;
-            height: 80px;
+            margin: 0 15px 0 0;
+            max-height: 80px;
+        }
+        &__x {
+            height: 21px;
+            width: 21px;
+            margin: 0 15px 0 0;
         }
         &__str {
             width: 98px;
@@ -111,11 +144,25 @@
             position: relative;
         }
         &__logos {
-            margin: 0 0 23px;
+            margin: 35px 0 23px;
         }
         &__logo {
-            margin: 0 18px 0 0;
-            height: 80px;
+            margin: 0 15px 0 0;
+
+            &_num1 {
+                max-height: 55px;
+            }
+            &_num2 {
+                display: none;
+            }
+            &_num3 {
+                max-width: 85px;
+            }
+        }
+        &__x {
+            height: 21px;
+            width: 21px;
+            margin: 0 15px 0 0;
         }
         &__str {
             width: 98px;
