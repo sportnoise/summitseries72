@@ -9,7 +9,10 @@
         align-items: center;
         margin: 22px 0 15px;
     }
-    &__logo {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 0 30px 0 0;
     }
     &__x {
@@ -17,7 +20,6 @@
         display: flex;
         height: 39px;
         width: 39px;
-        margin: 0 30px 0 0;
         transform: rotate(45deg);
 
         &:before,
@@ -114,14 +116,15 @@
         &__logos {
             margin: 0 0 15px;
         }
-        &__logo {
+        &__item {
             margin: 0 15px 0 0;
+        }
+        &__logo {
             max-height: 80px;
         }
         &__x {
             height: 21px;
             width: 21px;
-            margin: 0 15px 0 0;
         }
         &__str {
             width: 98px;
@@ -146,14 +149,17 @@
         &__logos {
             margin: 35px 0 23px;
         }
-        &__logo {
+        &__item {
             margin: 0 15px 0 0;
+
+            &_num2 {
+                display: none;
+            }
+        }
+        &__logo {
 
             &_num1 {
                 max-height: 55px;
-            }
-            &_num2 {
-                display: none;
             }
             &_num3 {
                 max-width: 85px;
@@ -162,7 +168,6 @@
         &__x {
             height: 21px;
             width: 21px;
-            margin: 0 15px 0 0;
         }
         &__str {
             width: 98px;

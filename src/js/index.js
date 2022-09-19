@@ -189,7 +189,7 @@ if (window.innerWidth > 991)
             .from(".block1__img3", { x: -600, delay: .5 }, "-=1")
             .from(".block1__img4", { x: 600 }, "-=1")
             .from(".block1__logo", { scale: 0 }, "-=0.5")
-            .from(".header__logo", { duration: 2  }, "-=1")
+            .from(".header__inner", { duration: 2  }, "-=1")
             .from(".block1__text", { scale: 0 }, "<");
 
         gsap.timeline({scrollTrigger: { trigger: ".block2", start: "top 90%", end: "bottom 20%"/*, scrub: true*/ }, defaults: { opacity: 0, ease: "power3.inOut", duration: 2 }})
